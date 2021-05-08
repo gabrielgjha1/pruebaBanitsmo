@@ -1,0 +1,53 @@
+<div class="shadow-4 p-3">
+  <h1 class="text-center">Clientes!</h1>
+
+  <mat-form-field class="w-100 mt-3">
+    <mat-label>Ingrese Id (60937d3a690d6e6ae7620810) </mat-label>
+    <input matInput placeholder="Ex. Pizza" [(ngModel)]="id" value="" />
+  </mat-form-field>
+  <button
+    class="w-100"
+    (click)="submit()"
+    type="submit"
+    mat-raised-button
+    color="accent"
+  >
+    Enviar
+  </button>
+
+  <section *ngIf="showData" class="information mt-3">
+    <section class="images">
+      <section class="img">
+        <img
+          class="text-center"
+          style="width: 135px; height: 135px"
+          src="assets/img/pngwing.com.png"
+          alt=""
+        />
+        <button
+          class="w-100 mt-2"
+          type="submit"
+          mat-raised-button
+          color="primary"
+          (click)="newPicture()"
+        >
+          Agregar Una Imagen
+        </button>
+      </section>
+    </section>
+
+    <section class="data">
+      <app-table [client]="client"></app-table>
+    </section>
+  </section>
+
+  <div *ngIf="showData" class="grid">
+    <div class="w-80">
+      <app-graficas [data]="data" [label]="label"></app-graficas>
+    </div>
+
+    <div class="w-80">
+      <app-graficas [data]="data2" [label]="label2"></app-graficas>
+    </div>
+  </div>
+</div>

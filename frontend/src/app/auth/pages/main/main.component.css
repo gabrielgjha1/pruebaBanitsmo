@@ -1,0 +1,23 @@
+section img {
+
+  width: 150px;
+  height: 150px;
+
+}
+section a {
+
+  font-size: 20px;
+  color:  black;
+  margin-right: 15px;
+  text-decoration: none;
+
+
+}
+
+.img{
+
+  display: flex;
+  justify-content: center;
+
+}
+
